@@ -299,6 +299,13 @@ class TestPBL(unittest.TestCase):
         metal = EchoNestGenreRadio('metal', 40)
         pipe = PlaylistSave(metal, 'metal radio3', 'plamere', create=False, append=True)
         assert(runner(pipe, 5) == 5)
+    
+    def test_playlist_save3(self):
+        ''' Ensures that PlaylistSave flushes-save on exhausted source even when its max_size limit is not hit.
+        '''
+        metal = EchoNestGenreRadio('metal', 40)
+        pipe = PlaylistSave(metal, 'metal radio4', 'plamere', max_size=100)
+        assert(runner(pipe, 100) == 40)
 
     def test_save_to_json(self):
         ''' save a metal playlist
