@@ -356,10 +356,14 @@ class PlaylistSave(object):
 
     def next_track(self):
         track = self.source.next_track()
-        if track and len(self.buffer) < self.max_size:
-            self.buffer.append(track)
-        elif not self.saved:
-            self._save_playlist()
+        if track:
+            if len(self.buffer) < self.max_size:
+                self.buffer.append(track)
+            elif not self.saved:
+                self._save_playlist()
+        else:
+            if self.buffer and not self.saved:
+                self._save_playlist()
         return track
 
     def _save_playlist(self):
