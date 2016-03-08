@@ -10,7 +10,7 @@ The Playlist Builder Library
 =============================
 
 The Playlist Builder Library (PBL) is a Python library that you can use to
-create playlists. 
+create playlists.
 
 A Quick Example
 ---------------
@@ -303,7 +303,7 @@ Spotify Sources
 ~~~~~~~~~~~~~~~
   * **AlbumSource** - produces tracks from the given album
   * **ArtistTopTracks** - produces the top tracks for a given artist
-  * **PlaylistSource** - poroduces tracks from a Spotify Playlist
+  * **PlaylistSource** - produces tracks from a Spotify Playlist
   * **TrackSource** - produces the given tracks
 
 Echo Nest Sources
@@ -322,13 +322,13 @@ Generic Sources
 Operators
 ~~~~~~~~~
 Operators work on a pipeline of tracks
-  
+
   * **Alternate** - takes a list of multiple sources and produces a stream of tracks drawn from the sources
   * **Annotate** - Annotates tracks with data from a source such as Spotify or The Echo Nest
   * **Buffer** - Collects a fixed number of tracks (useful when a source could generate a large number of tracks)
-  * **Case** - Conditionally choses tracks from multiple sources
+  * **Case** - Conditionally chooses tracks from multiple sources
   * **Concatentate** - concatenates streams
-  * **Conditional** - choses between two streams based on a conditional function
+  * **Conditional** - chooses between two streams based on a conditional function
   * **DeDup** - De-duplicates tracks from a stream
   * **First** - Returns the first N tracks from a stream
   * **Last** - Returns the last N tracks from a stream
@@ -358,7 +358,7 @@ Sinks
   * **PlaylistSave** - save the playlist to spotify
   * **SaveToJson** - save the playlist to a json file
 
-  
+
 API Reference
 ==============
 
@@ -395,7 +395,7 @@ API Reference
 Frequently Asked Questions
 ==========================
  * **I get an spotipy.oauth2.SpotifyOauthError: No client id error, what do I do?**  You need to set up your Spotify API credentials. See the **Quick Start** section for more details.
- * **I get an error pyen.PyenConfigurationException: Can't find your API keyanywhere, what do I do?** You need to set up your Echo Nest API credentials.  See the **Quick Start** for more details. 
+ * **I get an error pyen.PyenConfigurationException: Can't find your API keyanywhere, what do I do?** You need to set up your Echo Nest API credentials.  See the **Quick Start** for more details.
 
 
 Indices and tables
@@ -404,4 +404,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
