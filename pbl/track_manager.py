@@ -101,7 +101,7 @@ class TrackLibrary(object):
             Gets the value of the given attribute for a track
 
             :param tid: the track id
-            :param attr: the attribte name
+            :param attr: the attribute name
 
         '''
         # currently support 'attribute' or 'pkg.attribute'
