@@ -42,7 +42,7 @@ class TrackLibrary(object):
     def get_tn(self, tid):
         track = self.get_track(tid)
         if track:
-            return track['name'] + ' ' + track['artists'][0]['name'] \
+            return track['name'].encode('utf-8') + ' ' + track['artists'][0]['name'].encode('utf-8') \
                 + ' from ' + track['src']
         else:
             return '(none)'
